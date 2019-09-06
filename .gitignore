@@ -1,0 +1,15 @@
+images/oracle/docker-images
+images/ggbigdata-patch/kafka-connect/
+*.zip
+.vscode
+bin
+build
+.settings
+.idea
+.gradle
+.project
+*/.classpath
+*.xlsx
+*.pptx
+.DS_Store
+*.sql

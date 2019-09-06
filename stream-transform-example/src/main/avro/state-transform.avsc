@@ -1,0 +1,33 @@
+[
+    {
+        "type": "record",
+        "name": "metadata",
+        "namespace": "OGGUSER",
+        "fields": [
+            {"name": "table", "type": ["null", "string"], "default": null},
+            {"name": "current_ts", "type": ["null","string"], "default":null},
+            {"name": "pos", "type": ["null","string"], "default": null},
+            {"name": "op_type", "type": ["null","string"], "default": null},
+            {"name": "primary_keys", "type": ["null", {"type": "array", "items": "string"}], "default": null}
+        ]
+    },
+    {
+        "type": "record",
+        "name": "rowdata",
+        "namespace": "OGGUSER",
+        "fields": [
+            {"name":"EMPLOYEE_ID","type":["null","long"],"default":null},
+            {"name":"FIRST_NAME","type":["null","string"],"default":null},
+            {"name":"LAST_NAME","type":["null","string"],"default":null}
+            ]
+    },
+    {
+        "type": "record",
+        "name": "outputdata",
+        "namespace": "OGGUSER",
+        "fields": [
+            {"name": "metadata", "type": ["null", "OGGUSER.metadata"]},
+            {"name": "rowdata", "type": ["null", "OGGUSER.rowdata"]}
+        ]
+    }
+]

@@ -1,0 +1,43 @@
+gg.handlerlist=kafkaconnect
+
+#The handler properties
+gg.handler.kafkaconnect.type=kafkaconnect
+gg.handler.kafkaconnect.kafkaProducerConfigFile=kafkaconnect.properties
+gg.handler.kafkaconnect.mode=op
+gg.handler.name.BlockingSend=true
+#The following selects the topic name based on the fully qualified table name
+gg.handler.kafkaconnect.topicMappingTemplate=${fullyQualifiedTableName}
+#The following selects the message key using the concatenated primary keys
+gg.handler.kafkaconnect.keyMappingTemplate=${primaryKeys}
+
+#The formatter properties
+gg.handler.kafkaconnect.messageFormatting=row
+gg.handler.kafkaconnect.insertOpKey=I
+gg.handler.kafkaconnect.updateOpKey=U
+gg.handler.kafkaconnect.deleteOpKey=D
+gg.handler.kafkaconnect.truncateOpKey=T
+gg.handler.kafkaconnect.treatAllColumnsAsStrings=false
+gg.handler.kafkaconnect.iso8601Format=true
+gg.handler.kafkaconnect.pkUpdateHandling=abend
+gg.handler.kafkaconnect.includeTableName=true
+gg.handler.kafkaconnect.includeOpType=true
+gg.handler.kafkaconnect.includeOpTimestamp=true
+gg.handler.kafkaconnect.includeCurrentTimestamp=true
+gg.handler.kafkaconnect.includePosition=true
+gg.handler.kafkaconnect.includePrimaryKeys=true
+gg.handler.kafkaconnect.includeTokens=false
+
+goldengate.userexit.timestamp=utc
+goldengate.userexit.writers=javawriter
+javawriter.stats.display=TRUE
+javawriter.stats.full=TRUE
+
+gg.log=log4j
+gg.log.level=INFO
+
+gg.report.time=30sec
+
+#Apache Kafka Classpath
+gg.classpath=dirprm/:/u01/app/ogg/ggjava/resources/lib/*:/u01/app/ogg/ggjava/lib/*
+
+javawriter.bootoptions=-Xmx512m -Xms32m -Djava.class.path=.:ggjava/ggjava.jar:./dirprm
