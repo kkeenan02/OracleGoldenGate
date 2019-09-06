@@ -1,4 +1,4 @@
-# Sanding up an Oracle GoldenGate handler
+# Standing up an Oracle GoldenGate handler
 
 ## Introduction
 
