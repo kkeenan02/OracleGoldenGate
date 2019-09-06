@@ -192,31 +192,31 @@ list topics;
 print 'OGGUSER.POSN_VALUATION' from beginning;
 ```
 
-## Building and running ingest-dummy service
+## Building and running stream-transform-example service
 
 This java application uses kafka streams to recreate the database table state from the goldengate event stream being published to kafka.
 
 ```sh
-docker exec -it ingest-dummy /bin/bash
+docker exec -it stream-transform /bin/bash
 ```
 
 Clean, build and run the application
 
 ```sh
-cd ingest-dummy
+cd stream-transform
 gradle clean build run
 ```
 
 ## Building and running the table state api service
 
 ```sh
-docker exec -it kstreams /bin/bash
+docker exec -it table-state /bin/bash
 ```
 
 Clean, build and run the application
 
 ```sh
-cd operation-composer
+cd table-state
 gradle clean build run
 
 ### References
