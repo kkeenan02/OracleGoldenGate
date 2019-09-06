@@ -12,7 +12,7 @@ Oracle GoldenGate is an application that facilitates low-impact data replication
 ├── data-examples/      # Contains example Oracle GoldenGate operations records
 ├── goldengate-config/  # All goldengate configuration files
 ├── images/             # All docker files required to spin up the pipeline
-|── table-state-example/      # KStreams service for reconstructing table state
+├── table-state-example/      # KStreams service for reconstructing table state
 └── stream-transform-example/      # KStreams service for reconstructing table state
 ```
 
