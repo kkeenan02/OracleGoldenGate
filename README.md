@@ -189,7 +189,7 @@ From ksql cli, list topics, and print the one you'd like to see
 
 ```sql
 list topics;
-print 'OGGUSER.POSN_VALUATION' from beginning;
+print 'OGGUSER.EMPLOYEES' from beginning;
 ```
 
 ## Building and running stream-transform-example service
